@@ -132,7 +132,8 @@ class Model():
     # the rnn cell called by diff_bridge
     def _rnn_cell(self, features_input, eps_identity=1e-3):
         '''
-        rnn cell for supplying Gaussian state transitions
+        RNN cell for supplying Gaussian state transitions
+		:param features_input: input features for \tilde\alpha and \tilde\beta
         :param eps: eps * identity added to diffusion matrix to control numerical stability
         '''
         hidden_layer = tf.nn.relu(
@@ -157,10 +158,10 @@ class Model():
     # functions to return p simulations of a diffusion bridge
     def _path_sampler(self, xt, v_mu, v_sigma):
         '''
-        sample new state using learned Gaussian state transitions
-        :param inp: current state of system
-        :param mu_nn: drift vector from RNN
-        :param sigma_nn: diffusion matrix from RNN as cholesky factor
+        Sample new state using learned Gaussian state transitions
+		:param xt: the current state
+        :param v_mu: variational drift vector from RNN
+        :param v_sigma: variational diffusion matrix from RNN as cholesky factor
         '''
         xtplus_dist = tfd.TransformedDistribution(distribution=tfd.MultivariateNormalTriL(
             loc = xt + self.dt * v_mu, scale_tril = tf.sqrt(self.dt) * v_sigma),
@@ -174,7 +175,7 @@ class Model():
         '''
         trains model
         :pars niter: number of iterations
-        :pars PATH: path to tensorboard output
+        :pars path: path to tensorboard output
         '''
         print("Training model...")
         writer = tf.summary.FileWriter(
