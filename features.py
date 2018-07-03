@@ -1,13 +1,5 @@
 import pandas as pd
 import numpy as np
-import tensorflow as tf
-
-tf_dtype = tf.float32
-np_dtype = np.float32
-
-tfd = tf.contrib.distributions
-tfb = tfd.bijectors
-
 
 def extract_features(obs, obs_times, dt):
     l = int(obs_times[-1]/dt)

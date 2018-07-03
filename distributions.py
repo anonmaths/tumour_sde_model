@@ -1,15 +1,13 @@
 import numpy as np
 import tensorflow as tf
 
-tf_dtype = tf.float32
-np_dtype = np.float32
 
 tfd = tf.contrib.distributions
 tfb = tfd.bijectors
 
 def init_param(log_mean, log_std, fix_mean = False):
     '''
-    Initialise lognormal priors on the model parameters
+    Initialise variational hyperparameters and distribution
     '''
     # Map back lognormal moments to normal moments
     mean = tf.log(tf.square(log_mean) / tf.sqrt(tf.square(log_std) + tf.square(log_mean)))
