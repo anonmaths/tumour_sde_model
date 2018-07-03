@@ -6,6 +6,8 @@ The code is based on: https://github.com/Tom-Ryder/VIforSDEs/
 ***
 The source of the dataset: http://clincancerres.aacrjournals.org/content/18/16/4385
 ***
+A similar model specification: https://arxiv.org/abs/1607.02633
+***
 The model is given by the system of SDEs:
 <p align="center"><img src="/tex/fad4d834199976e6507fd0a3a3549e33.svg?invert_in_darkmode&sanitize=true" align=middle width=581.98336185pt height=100.6354899pt/></p>
 where <img src="/tex/47b592a798cd56ccf668b67abad36a61.svg?invert_in_darkmode&sanitize=true" align=middle width=19.083998999999988pt height=14.15524440000002pt/> is the number of observations for subject i, <img src="/tex/a6d2b22abd853129d8f8ddb037488df3.svg?invert_in_darkmode&sanitize=true" align=middle width=162.04764344999998pt height=24.65753399999998pt/> maps the ith patient to their treatment group index.
