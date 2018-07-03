@@ -6,6 +6,8 @@ The code is based on: https://github.com/Tom-Ryder/VIforSDEs/
 ***
 The source of the dataset: http://clincancerres.aacrjournals.org/content/18/16/4385
 ***
+A similar model specification: https://arxiv.org/abs/1607.02633
+***
 The model is given by the system of SDEs:
 \begin{align}
 \log Y_{ij} &=  \log V_{ij} + \epsilon_{ij}, \hspace{20pt} j = 1,2,\dots,m_i; \hspace{5pt} i=1, 2, \dots, n_{subjects}\\
@@ -16,7 +18,7 @@ dV^k_{i,t} &= (\alpha_{k_i} V^s_{i,t} - \delta_i  V^k_{i,t})dt + \tau V^k_{i,t} 
 where $m_i$ is the number of observations for subject i, $k_i \in \{1,2,\dots, n_{groups}\}$ maps the ith patient to their treatment group index.
 
 The noise is assumed to be distributed according to
-- $\log \epsilon_{ij} \sim \mathcal{N}(0, \sigma^2),$
+- $\epsilon_{ij} \sim \mathcal{N}(0, \sigma^2),$
 which may equivalently be written as
 - $\tilde{\epsilon}_{ij}^{-1} \sim \tilde{\epsilon}_{ij} \sim \mathcal{LN}\left(e^{\sigma^2/2}, e^{\sigma^2}(e^{\sigma^2}-1)\right).$
 
