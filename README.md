@@ -13,7 +13,7 @@ The model is given by the system of SDEs:
 where <img src="/tex/47b592a798cd56ccf668b67abad36a61.svg?invert_in_darkmode&sanitize=true" align=middle width=19.083998999999988pt height=14.15524440000002pt/> is the number of observations for subject i, <img src="/tex/a6d2b22abd853129d8f8ddb037488df3.svg?invert_in_darkmode&sanitize=true" align=middle width=162.04764344999998pt height=24.65753399999998pt/> maps the ith patient to their treatment group index.
 
 The noise is assumed to be distributed according to
-- <img src="/tex/8c8f4f7aa339d85855b016fd8a115345.svg?invert_in_darkmode&sanitize=true" align=middle width=130.28382015pt height=26.76175259999998pt/>
+- <img src="/tex/c3762b80bdb4fb93d50ad7b35b0efc1f.svg?invert_in_darkmode&sanitize=true" align=middle width=106.31125229999999pt height=26.76175259999998pt/>
 which may equivalently be written as
 - <img src="/tex/d4ebc3628db4fbba5ac9185a6b398742.svg?invert_in_darkmode&sanitize=true" align=middle width=273.78914145pt height=37.80850590000001pt/>
 
