@@ -6,6 +6,8 @@ The code is based on: https://github.com/Tom-Ryder/VIforSDEs/
 ***
 The source of the dataset: http://clincancerres.aacrjournals.org/content/18/16/4385
 ***
+A similar model specification: https://arxiv.org/abs/1607.02633
+***
 The model is given by the system of SDEs:
 \begin{align}
 \log Y_{ij} &=  \log V_{ij} + \epsilon_{ij}, \hspace{20pt} j = 1,2,\dots,m_i; \hspace{5pt} i=1, 2, \dots, n_{subjects}\\
